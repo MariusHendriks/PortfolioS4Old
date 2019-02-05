@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import PostForm from "./PostForm";
-import PostFeed from "./PostFeed";
+import FeedGenerator from "./FeedGenerator";
 import Spinner from "../common/Spinner";
 import { getPosts } from "../../actions/postActions";
 
@@ -18,14 +17,14 @@ class Posts extends Component {
     if (posts === null || loading) {
       postContent = <Spinner />;
     } else {
-      postContent = <PostFeed posts={posts} />;
+      postContent = <FeedGenerator posts={posts} />;
     }
 
     return (
-      <div className="feed">
-        <div className="container fullheight">
-          <div className="row">
-            <div className="col-md-12">{postContent}</div>
+      <div className="">
+        <div className="">
+          <div className="">
+            <div className="">{postContent}</div>
           </div>
         </div>
       </div>

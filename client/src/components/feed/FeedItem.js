@@ -7,13 +7,14 @@ class PostItem extends Component {
     const { post } = this.props;
 
     return (
-      <div className="card card-body mb-3">
-        <div className="row">
-          <div className="col-md-2">
+      <div className="">
+        <div className="">
+          <div className="">
+            {post.summary}
             <br />
           </div>
-          <div className="col-md-10">
-            <p className="lead">{post.text}</p>
+          <div className="">
+            <p className="">{post.text}</p>
           </div>
         </div>
       </div>

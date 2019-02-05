@@ -12,7 +12,6 @@ import PrivateRoute from "./components/common/PrivateRoute";
 
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
-import Landing from "./components/layout/Landing";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import Dashboard from "./components/dashboard/Dashboard";
@@ -25,7 +24,7 @@ import Profile from "./components/profile/Profile";
 import Posts from "./components/posts/Posts";
 import Post from "./components/post/Post";
 import NotFound from "./components/not-found/NotFound";
-import Feed from "./components/feed/Posts";
+import Feed from "./components/feed/Feed";
 
 import "./App.css";
 
@@ -59,13 +58,10 @@ class App extends Component {
             <Navbar />
             <Route exact path="/" component={Feed} />
             <div className="container">
-              {/* <Route exact path="/register" component={Register} /> */}
+              <Route exact path="/registerSecret" component={Register} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/profiles" component={Profiles} />
               <Route exact path="/profile/:handle" component={Profile} />
-              <Switch>
-                <PrivateRoute exact path="/dashboard" component={Dashboard} />
-              </Switch>
               <Switch>
                 <PrivateRoute
                   exact

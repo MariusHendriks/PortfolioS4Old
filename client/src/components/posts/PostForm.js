@@ -25,16 +25,14 @@ class PostForm extends Component {
   onSubmit(e) {
     e.preventDefault();
 
-    const { user } = this.props.auth;
-
     const newPost = {
       text: this.state.text,
-      name: user.name,
-      avatar: user.avatar
+      summary: this.state.summary
     };
 
     this.props.addPost(newPost);
     this.setState({ text: "" });
+    this.setState({ summary: "" });
   }
 
   onChange(e) {
@@ -54,11 +52,18 @@ class PostForm extends Component {
             <form onSubmit={this.onSubmit}>
               <div className="form-group">
                 <TextAreaFieldGroup
-                  placeholder="Create a post"
+                  placeholder="Voeg hier het lange saaie bestand in"
                   name="text"
                   value={this.state.text}
                   onChange={this.onChange}
                   error={errors.text}
+                />
+                <TextAreaFieldGroup
+                  placeholder="Voeg hier een kort verhaal ervan in"
+                  name="summary"
+                  value={this.state.summary}
+                  onChange={this.onChange}
+                  error={errors.summary}
                 />
               </div>
               <button type="submit" className="btn btn-dark">
