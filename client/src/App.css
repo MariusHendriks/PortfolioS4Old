@@ -1,5 +1,4 @@
 body {
-  margin-bottom: 100px !important;
 }
 
 img {
@@ -37,14 +36,13 @@ img {
   width: 40px;
   height: 40px;
 }
-
+.fullheight {
+  min-height: 90vh;
+}
 .form-control::placeholder {
   color: #bbb !important;
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
   width: 100%;
 }

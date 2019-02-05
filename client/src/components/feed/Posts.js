@@ -23,12 +23,9 @@ class Posts extends Component {
 
     return (
       <div className="feed">
-        <div className="container">
+        <div className="container fullheight">
           <div className="row">
-            <div className="col-md-12">
-              <PostForm />
-              {postContent}
-            </div>
+            <div className="col-md-12">{postContent}</div>
           </div>
         </div>
       </div>
