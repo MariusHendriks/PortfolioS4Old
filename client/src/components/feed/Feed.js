@@ -21,13 +21,7 @@ class Posts extends Component {
     }
 
     return (
-      <div className="">
-        <div className="">
-          <div className="">
             <div className="">{postContent}</div>
-          </div>
-        </div>
-      </div>
     );
   }
 }

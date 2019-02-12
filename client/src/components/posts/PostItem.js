@@ -10,17 +10,20 @@ class PostItem extends Component {
   }
 
   render() {
-    const { post, auth, showActions } = this.props;
-
+    const { auth, showActions } = this.props;
+    const {post} = this.props;
+  
     return (
-      <div className="card card-body mb-3">
-        <div className="row">
-          <div className="col-md-2">
+      <div className="">
+        <div className="">
+        {post.summary}
+          <div className="">
             <br />
-            <p className="text-center">{post.name}</p>
+            <p className="">{post.name}</p>
           </div>
-          <div className="col-md-10">
-            <p className="lead">{post.text}</p>
+          <div className="">
+          {post.text.startsWith("<iframe") ? <div dangerouslySetInnerHTML={{ __html: post.text }}></div> : <p className="">{post.text}</p>}
+            
             {showActions ? (
               <span>
                 <Link to={`/post/${post._id}`} className="btn btn-info mr-1">
